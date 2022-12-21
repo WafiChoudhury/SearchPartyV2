@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LaunchView: View {
     
     
     var body: some View {
+        
+        
+        
         NavigationView{
         
         VStack{

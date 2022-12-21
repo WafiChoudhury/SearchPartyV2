@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
+    
+    @ObservedObject var viewModel = PartyViewModel()
+    @EnvironmentObject var model: PartyViewModel
 
-        TabView {
-            
+    
+    var body: some View {
+        
+        NavigationView{
+            ScrollView(showsIndicators:false){
+                
+                VStack(spacing: 25) {
+                    Spacer()
+                    
+                    ForEach((0...viewModel.parties.count-1), id: \.self) {
+                        PartyComponent(img: viewModel.parties[$0].image, title: viewModel.parties[$0].title, party: viewModel.parties[$0])
+                       }
+                    
+                    
+                }
+                .onAppear(){
+                    
+                    self.viewModel.fetchParties()
+                    model.requestGeoLocationPermission()
+                    print(viewModel.parties.count)
+                }
+                .padding()
+            }
             
         }
-
+        
     }
 }
 

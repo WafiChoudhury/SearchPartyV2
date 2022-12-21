@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Search_Party_V2App: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }
