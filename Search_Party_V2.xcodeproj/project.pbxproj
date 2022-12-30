@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		B11559E12953CB03000A7C44 /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E02953CB03000A7C44 /* DirectionsView.swift */; };
 		B11559E32953CB52000A7C44 /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E22953CB52000A7C44 /* DirectionsMap.swift */; };
+		B11559E62953CFE9000A7C44 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E52953CFE9000A7C44 /* CreateAccount.swift */; };
+		B13DB7D7295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png in Resources */ = {isa = PBXBuildFile; fileRef = B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */; };
 		B140F889294FFE89008019FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B140F888294FFE89008019FC /* GoogleService-Info.plist */; };
+		B1448E32295BAB2300BD6C13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1448E31295BAB2300BD6C13 /* SettingsView.swift */; };
+		B1448E34295BB1CE00BD6C13 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1448E33295BB1CD00BD6C13 /* SavedView.swift */; };
 		B1471678294D737D001E6A56 /* Get_Started_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1471677294D737D001E6A56 /* Get_Started_Button.swift */; };
 		B14DC1AC294EBF8E00145D0E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DC1AB294EBF8E00145D0E /* LoginView.swift */; };
 		B14DC1AE294EC3C400145D0E /* LoginInputForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DC1AD294EC3C300145D0E /* LoginInputForms.swift */; };
 		B14DC1B4294FC82E00145D0E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14DC1B3294FC82E00145D0E /* MainView.swift */; };
 		B15495E6294FCEFE00BEA072 /* PartyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15495E5294FCEFE00BEA072 /* PartyComponent.swift */; };
+		B16F05FA29541CDF00B7D574 /* SignUpInputForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F05F929541CDF00B7D574 /* SignUpInputForms.swift */; };
+		B16F05FC295420A900B7D574 /* golden.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B16F05FB295420A900B7D574 /* golden.jpeg */; };
+		B16F05FE29550A0100B7D574 /* RspvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F05FD29550A0100B7D574 /* RspvView.swift */; };
+		B16F06002955818D00B7D574 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F05FF2955818C00B7D574 /* User.swift */; };
 		B18EB22A294D63D90073A853 /* Search_Party_V2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB229294D63D90073A853 /* Search_Party_V2App.swift */; };
 		B18EB22C294D63D90073A853 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB22B294D63D90073A853 /* ContentView.swift */; };
 		B18EB22E294D63DD0073A853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18EB22D294D63DD0073A853 /* Assets.xcassets */; };
@@ -27,21 +35,30 @@
 		B1B6BE152951437E003BB40E /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE142951437E003BB40E /* CustomTabBarView.swift */; };
 		B1B6BE172951439B003BB40E /* CustomTabContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE162951439B003BB40E /* CustomTabContainer.swift */; };
 		B1B6BE19295143D6003BB40E /* TabBarItemsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE18295143D6003BB40E /* TabBarItemsKey.swift */; };
-		F2840D9667CF086DDA57ACE8 /* Pods_Search_Party_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9B3E570165FF857E4AC3F /* Pods_Search_Party_V2.framework */; };
+		B1D6FE08295D5394005C7016 /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6FE07295D5394005C7016 /* SettingRowView.swift */; };
+		D10C81E2C590CF0519C32363 /* Pods_Search_Party_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF334B03A39C7EC9ADBE1043 /* Pods_Search_Party_V2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54F9B3E570165FF857E4AC3F /* Pods_Search_Party_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search_Party_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7F6BE716119E01E692AC16F /* Pods-Search_Party_V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_Party_V2.debug.xcconfig"; path = "Target Support Files/Pods-Search_Party_V2/Pods-Search_Party_V2.debug.xcconfig"; sourceTree = "<group>"; };
-		A8D7F17A77CFA347C9B1C965 /* Pods-Search_Party_V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_Party_V2.release.xcconfig"; path = "Target Support Files/Pods-Search_Party_V2/Pods-Search_Party_V2.release.xcconfig"; sourceTree = "<group>"; };
+		7619EF5BC93F8AC942ED3FAD /* Pods-Search_Party_V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_Party_V2.debug.xcconfig"; path = "Target Support Files/Pods-Search_Party_V2/Pods-Search_Party_V2.debug.xcconfig"; sourceTree = "<group>"; };
 		B11559E02953CB03000A7C44 /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
 		B11559E22953CB52000A7C44 /* DirectionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsMap.swift; sourceTree = "<group>"; };
+		B11559E52953CFE9000A7C44 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		B11559E72953D2EB000A7C44 /* Search_Party_V2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Search_Party_V2.entitlements; sourceTree = "<group>"; };
+		B13DB7D52958168B0088068B /* Search-Party-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Search-Party-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png"; sourceTree = "<group>"; };
 		B140F888294FFE89008019FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1448E31295BAB2300BD6C13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1448E33295BB1CD00BD6C13 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
 		B1471677294D737D001E6A56 /* Get_Started_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get_Started_Button.swift; sourceTree = "<group>"; };
 		B14DC1AB294EBF8E00145D0E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B14DC1AD294EC3C300145D0E /* LoginInputForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputForms.swift; sourceTree = "<group>"; };
 		B14DC1B3294FC82E00145D0E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B15495E5294FCEFE00BEA072 /* PartyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyComponent.swift; sourceTree = "<group>"; };
+		B16F05F929541CDF00B7D574 /* SignUpInputForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInputForms.swift; sourceTree = "<group>"; };
+		B16F05FB295420A900B7D574 /* golden.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = golden.jpeg; sourceTree = "<group>"; };
+		B16F05FD29550A0100B7D574 /* RspvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RspvView.swift; sourceTree = "<group>"; };
+		B16F05FF2955818C00B7D574 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B18EB226294D63D90073A853 /* Search_Party_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Search_Party_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18EB229294D63D90073A853 /* Search_Party_V2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search_Party_V2App.swift; sourceTree = "<group>"; };
 		B18EB22B294D63D90073A853 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +72,9 @@
 		B1B6BE142951437E003BB40E /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		B1B6BE162951439B003BB40E /* CustomTabContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabContainer.swift; sourceTree = "<group>"; };
 		B1B6BE18295143D6003BB40E /* TabBarItemsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsKey.swift; sourceTree = "<group>"; };
+		B1D6FE07295D5394005C7016 /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
+		CF334B03A39C7EC9ADBE1043 /* Pods_Search_Party_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Search_Party_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C0336AB89A6436AEAF3C8F /* Pods-Search_Party_V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Search_Party_V2.release.xcconfig"; path = "Target Support Files/Pods-Search_Party_V2/Pods-Search_Party_V2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2840D9667CF086DDA57ACE8 /* Pods_Search_Party_V2.framework in Frameworks */,
+				D10C81E2C590CF0519C32363 /* Pods_Search_Party_V2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A23E9DE7F2C32EB7CF7B9C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF334B03A39C7EC9ADBE1043 /* Pods_Search_Party_V2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9132DED44B4B4BA0B2B009D8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A7F6BE716119E01E692AC16F /* Pods-Search_Party_V2.debug.xcconfig */,
-				A8D7F17A77CFA347C9B1C965 /* Pods-Search_Party_V2.release.xcconfig */,
+				7619EF5BC93F8AC942ED3FAD /* Pods-Search_Party_V2.debug.xcconfig */,
+				F9C0336AB89A6436AEAF3C8F /* Pods-Search_Party_V2.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B11559E42953CFB6000A7C44 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B11559E02953CB03000A7C44 /* DirectionsView.swift */,
+				B11559E22953CB52000A7C44 /* DirectionsMap.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		B15495E3294FCECE00BEA072 /* Main */ = {
@@ -83,6 +120,10 @@
 			children = (
 				B14DC1B3294FC82E00145D0E /* MainView.swift */,
 				B15495E5294FCEFE00BEA072 /* PartyComponent.swift */,
+				B16F05FD29550A0100B7D574 /* RspvView.swift */,
+				B1448E31295BAB2300BD6C13 /* SettingsView.swift */,
+				B1448E33295BB1CD00BD6C13 /* SavedView.swift */,
+				B1D6FE07295D5394005C7016 /* SettingRowView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -94,6 +135,8 @@
 				B14DC1AB294EBF8E00145D0E /* LoginView.swift */,
 				B1471677294D737D001E6A56 /* Get_Started_Button.swift */,
 				B14DC1AD294EC3C300145D0E /* LoginInputForms.swift */,
+				B11559E52953CFE9000A7C44 /* CreateAccount.swift */,
+				B16F05F929541CDF00B7D574 /* SignUpInputForms.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -105,7 +148,7 @@
 				B18EB228294D63D90073A853 /* Search_Party_V2 */,
 				B18EB227294D63D90073A853 /* Products */,
 				9132DED44B4B4BA0B2B009D8 /* Pods */,
-				C53947815CD357F9BA3A5837 /* Frameworks */,
+				6A23E9DE7F2C32EB7CF7B9C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,13 +163,16 @@
 		B18EB228294D63D90073A853 /* Search_Party_V2 */ = {
 			isa = PBXGroup;
 			children = (
+				B13DB7D52958168B0088068B /* Search-Party-V2-Info.plist */,
+				B11559E72953D2EB000A7C44 /* Search_Party_V2.entitlements */,
 				B18EB229294D63D90073A853 /* Search_Party_V2App.swift */,
 				B18EB22B294D63D90073A853 /* ContentView.swift */,
 				B18EB239294D66FD0073A853 /* Models */,
 				B18EB238294D66DA0073A853 /* Views */,
-				B1B6BE0F29514314003BB40E /* CustomTabVie */,
+				B1B6BE0F29514314003BB40E /* CustomTabView */,
 				B18EB237294D66D80073A853 /* ViewModels */,
 				B18EB22D294D63DD0073A853 /* Assets.xcassets */,
+				B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */,
 				B18EB22F294D63DD0073A853 /* Preview Content */,
 			);
 			path = Search_Party_V2;
@@ -143,6 +189,7 @@
 		B18EB237294D66D80073A853 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B16F05FB295420A900B7D574 /* golden.jpeg */,
 				B1B6BE0D29512F0E003BB40E /* PartyViewModel.swift */,
 			);
 			path = ViewModels;
@@ -151,10 +198,9 @@
 		B18EB238294D66DA0073A853 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B11559E42953CFB6000A7C44 /* Map */,
 				B15495E4294FCED900BEA072 /* Auth */,
 				B15495E3294FCECE00BEA072 /* Main */,
-				B11559E02953CB03000A7C44 /* DirectionsView.swift */,
-				B11559E22953CB52000A7C44 /* DirectionsMap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,11 +209,12 @@
 			isa = PBXGroup;
 			children = (
 				B1B6BE0B29512D6E003BB40E /* PartyModel.swift */,
+				B16F05FF2955818C00B7D574 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B1B6BE0F29514314003BB40E /* CustomTabVie */ = {
+		B1B6BE0F29514314003BB40E /* CustomTabView */ = {
 			isa = PBXGroup;
 			children = (
 				B1B6BE1029514346003BB40E /* Tab.swift */,
@@ -176,15 +223,7 @@
 				B1B6BE162951439B003BB40E /* CustomTabContainer.swift */,
 				B1B6BE18295143D6003BB40E /* TabBarItemsKey.swift */,
 			);
-			path = CustomTabVie;
-			sourceTree = "<group>";
-		};
-		C53947815CD357F9BA3A5837 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54F9B3E570165FF857E4AC3F /* Pods_Search_Party_V2.framework */,
-			);
-			name = Frameworks;
+			path = CustomTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B18EB234294D63DD0073A853 /* Build configuration list for PBXNativeTarget "Search_Party_V2" */;
 			buildPhases = (
-				94215E678CFC500B0C69CBE9 /* [CP] Check Pods Manifest.lock */,
+				E8C8620D9E06A3E2BB12586C /* [CP] Check Pods Manifest.lock */,
 				B18EB222294D63D90073A853 /* Sources */,
 				B18EB223294D63D90073A853 /* Frameworks */,
 				B18EB224294D63D90073A853 /* Resources */,
-				46A9217048F30C51279C033F /* [CP] Embed Pods Frameworks */,
+				22977AD8417F5217AE51D666 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,7 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F05FC295420A900B7D574 /* golden.jpeg in Resources */,
 				B18EB231294D63DD0073A853 /* Preview Assets.xcassets in Resources */,
+				B13DB7D7295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png in Resources */,
 				B140F889294FFE89008019FC /* GoogleService-Info.plist in Resources */,
 				B18EB22E294D63DD0073A853 /* Assets.xcassets in Resources */,
 			);
@@ -256,7 +297,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46A9217048F30C51279C033F /* [CP] Embed Pods Frameworks */ = {
+		22977AD8417F5217AE51D666 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,7 +314,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Search_Party_V2/Pods-Search_Party_V2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94215E678CFC500B0C69CBE9 /* [CP] Check Pods Manifest.lock */ = {
+		E8C8620D9E06A3E2BB12586C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,17 +349,24 @@
 				B1B6BE0C29512D6E003BB40E /* PartyModel.swift in Sources */,
 				B15495E6294FCEFE00BEA072 /* PartyComponent.swift in Sources */,
 				B1B6BE1129514346003BB40E /* Tab.swift in Sources */,
+				B1448E34295BB1CE00BD6C13 /* SavedView.swift in Sources */,
 				B1B6BE1329514369003BB40E /* TabBarItem.swift in Sources */,
+				B11559E62953CFE9000A7C44 /* CreateAccount.swift in Sources */,
 				B1471678294D737D001E6A56 /* Get_Started_Button.swift in Sources */,
 				B18EB22C294D63D90073A853 /* ContentView.swift in Sources */,
 				B1B6BE152951437E003BB40E /* CustomTabBarView.swift in Sources */,
+				B16F05FA29541CDF00B7D574 /* SignUpInputForms.swift in Sources */,
 				B1B6BE19295143D6003BB40E /* TabBarItemsKey.swift in Sources */,
 				B18EB23B294D67310073A853 /* LaunchView.swift in Sources */,
 				B14DC1AC294EBF8E00145D0E /* LoginView.swift in Sources */,
 				B1B6BE172951439B003BB40E /* CustomTabContainer.swift in Sources */,
 				B11559E12953CB03000A7C44 /* DirectionsView.swift in Sources */,
+				B1D6FE08295D5394005C7016 /* SettingRowView.swift in Sources */,
 				B11559E32953CB52000A7C44 /* DirectionsMap.swift in Sources */,
 				B18EB22A294D63D90073A853 /* Search_Party_V2App.swift in Sources */,
+				B16F05FE29550A0100B7D574 /* RspvView.swift in Sources */,
+				B16F06002955818D00B7D574 /* User.swift in Sources */,
+				B1448E32295BAB2300BD6C13 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,22 +489,27 @@
 		};
 		B18EB235294D63DD0073A853 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7F6BE716119E01E692AC16F /* Pods-Search_Party_V2.debug.xcconfig */;
+			baseConfigurationReference = 7619EF5BC93F8AC942ED3FAD /* Pods-Search_Party_V2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Search-Party-V2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SearchParty;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = information;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,22 +525,27 @@
 		};
 		B18EB236294D63DD0073A853 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8D7F17A77CFA347C9B1C965 /* Pods-Search_Party_V2.release.xcconfig */;
+			baseConfigurationReference = F9C0336AB89A6436AEAF3C8F /* Pods-Search_Party_V2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Search-Party-V2-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SearchParty;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = information;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

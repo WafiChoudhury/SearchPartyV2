@@ -16,22 +16,31 @@ struct Tab: View {
     
     var body: some View {
         
-        CustomTabContainerView(selection: $tabSelection) {
+        TabView{
             
-          
+            SavedView()
+                .environmentObject(viewModel)
+                .tabItem {
+                    Label("Saved", systemImage: "star.fill")
+                }              .navigationBarBackButtonHidden(true)
+            
+            
             MainView()
                 .environmentObject(viewModel)
-                .tabBarItem(tab: .home, selection: $tabSelection)
-            MainView()
-                .environmentObject(viewModel)
-                .tabBarItem(tab: .profile, selection: $tabSelection)
+                .tabItem {
+                    Label("Main", systemImage: "house.fill")
+                }              .navigationBarBackButtonHidden(true)
             
-        
+            SettingsView()
+                .environmentObject(viewModel)
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }              .navigationBarBackButtonHidden(true)
         }
-
+        
     }
     
- 
+    
     
 }
 extension Tab{
@@ -39,7 +48,7 @@ extension Tab{
     private var defaultTabView : some View {
         
         TabView(selection: $selection){
-              
+            
             MainView()
                 .environmentObject(PartyViewModel())
                 .tabItem {

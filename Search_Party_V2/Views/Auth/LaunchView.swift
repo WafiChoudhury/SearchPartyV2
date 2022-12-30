@@ -15,7 +15,6 @@ struct LaunchView: View {
         
         
         
-        NavigationView{
         
         VStack{
             
@@ -48,7 +47,7 @@ struct LaunchView: View {
         }
         .background(Color("purple"))
     }
-    }
+    
 }
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {

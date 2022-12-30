@@ -15,14 +15,16 @@ class PartyViewModel: NSObject, CLLocationManagerDelegate, ObservableObject  {
     
     
     @Published var parties = [PartyModel]()
+    @Published var saved = [PartyModel]()
     var locationManager = CLLocationManager()
     @Published var authorizationState = CLAuthorizationStatus.notDetermined
 
     override init(){
         
         super.init()
-        parties.append(PartyModel(image: "Omega", price: 10, title: "Omegas Party", description: "party", latitude: 0.0, longitude: 0.0, address: "some house", id: "seshsh"))
-
+        parties.append(PartyModel(image: "Omega", price: 10, title: "Omegas Party", description: "party", latitude: 0.0, longitude: 0.0, address: "some house", id: "seshsh", capacity: 100, attendees: 10))
+        
+        self.saved.append(PartyModel(image: "Omega", price: 10, title: "Omegas Party", description: "party", latitude: 0.0, longitude: 0.0, address: "some house", id: "seshsh", capacity: 100, attendees: 10))
     }
     
     
@@ -63,6 +65,7 @@ class PartyViewModel: NSObject, CLLocationManagerDelegate, ObservableObject  {
         }
 
     
+   
     func fetchParties(){
         
         
@@ -92,16 +95,96 @@ class PartyViewModel: NSObject, CLLocationManagerDelegate, ObservableObject  {
                 let lat = data["latitude"] as? Double ?? 0.0
                 let lon = data["longitude"] as? Double ?? 0.0
                 let adress = data["adress"] as? String ?? "fun party"
-
-                let id = UUID().uuidString
+                let cap = data["capacity"] as? Int ?? 0
+                let atend = data["atendees"] as? Int ?? 0
                 
-                return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id)
+                let id = data["id"] as? String ?? ""
+                return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend) 
                 
             }
 
         }
+    }
+    
+    func fetchSaved(){
+        
+        
+        
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
+        
+        
+        //check errors
+        let db = Firestore.firestore()
+        let usersRef = db.collection("users")
+        let firstElement = saved.first!
+        saved.removeAll()
+        saved.append(firstElement)
+        
+        if let currentUserID = Auth.auth().currentUser?.uid {
+            let currentUserRef = usersRef.document(currentUserID)
+            
+            currentUserRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    // Access the array
+                    let myArray = document.data()?["saved"] as? [String]
+                    // Access an element of the array
+                    if let myArray = myArray {
+                        for element in myArray {
+                            
+                            self.addSaved(uid: element)
+                        }
+                    }
+                } else {
+                    print("Document does not exist")
+                }
+            }
+            
+        }
+    
+    }
+    
+    
+    func addSaved(uid:String){
+        //check errors
+        let db = Firestore.firestore()
+        let partiesRef = db.collection("Parties")
+        
+        // Get all the parties in the collection
+        partiesRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error getting parties: \(error)")
+            } else {
+                for document in querySnapshot!.documents {
+                    // Get the data for the current party
+                    let data = document.data()
+                    // Check if the uid matches the target uid
+                    if data["id"] as? String == uid {
+                        // Add the party to the array of saved parties
+                        let img = data["image"] as? String ?? ""
+                        let price = data["price"] as? Double ?? 0.0
+                        let title = data["title"] as? String ?? ""
+                        let description = data["description"] as? String ?? "fun party"
+                        let lat = data["latitude"] as? Double ?? 0.0
+                        let lon = data["longitude"] as? Double ?? 0.0
+                        let adress = data["adress"] as? String ?? "fun party"
+                        let cap = data["capacity"] as? Int ?? 0
+                        let atend = data["atendees"] as? Int ?? 0
+                        
+                        let id = data["id"] as? String ?? ""
+                    
+                        self.saved.append(PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend))
+                    }
+                }
+            }
+        }
+        
+        
         
     }
+    
+    
 }
 
 

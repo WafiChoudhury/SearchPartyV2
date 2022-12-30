@@ -15,17 +15,15 @@ struct MainView: View {
     
     var body: some View {
         
-        NavigationView{
             ScrollView(showsIndicators:false){
                 
                 VStack(spacing: 25) {
-                    Spacer()
                     
                     ForEach((0...viewModel.parties.count-1), id: \.self) {
                         PartyComponent(img: viewModel.parties[$0].image, title: viewModel.parties[$0].title, party: viewModel.parties[$0])
                        }
                     
-                    
+                    Spacer()
                 }
                 .onAppear(){
                     
@@ -36,7 +34,7 @@ struct MainView: View {
                 .padding()
             }
             
-        }
+        
         
     }
 }

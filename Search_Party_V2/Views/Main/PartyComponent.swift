@@ -41,8 +41,9 @@ struct PartyComponent: View {
                     Text(title)
                         .foregroundColor(Color("dark-purple"))
                         .bold()
+                    
                     NavigationLink {
-                        
+                        RsvpView(party: party)
                     } label: {
                         ZStack{
                             Rectangle()
@@ -52,6 +53,8 @@ struct PartyComponent: View {
                             
                             HStack{
                                 Text("RSVP")
+                                .foregroundColor(Color("dark-purple"))
+                                .bold()
                                 Image(systemName: "cart")
                             }
                             
@@ -72,6 +75,8 @@ struct PartyComponent: View {
                             
                             HStack{
                                 Text("Find it")
+                                    .foregroundColor(Color("dark-purple"))
+                                    .bold()
                                 Image(systemName: "location.fill")
                             }
                             

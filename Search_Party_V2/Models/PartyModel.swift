@@ -17,7 +17,8 @@ struct PartyModel: Identifiable{
     var longitude: Double?
     var address: String?
     var id: String
-    
+    var capacity: Int
+    var attendees:Int
     
     enum CodingKeys: String, CodingKey {
 
@@ -30,9 +31,25 @@ struct PartyModel: Identifiable{
         case location
         case adress
         case id
-        
+        case capacity
+        case attendees
+
       }
-    
+    var dictionary: [String: Any] {
+       return [
+         "image": image,
+         "price": price,
+         "title": title,
+         "description": description,
+         "latitude":latitude,
+         "longitude": longitude,
+         "address": address,
+         "id": id,
+         "capacity":capacity,
+         "attendees" : attendees
+         
+       ]
+     }
 
     
 }

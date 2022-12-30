@@ -12,12 +12,13 @@ import SwiftUI
 struct DirectionsMap: UIViewRepresentable{
     
    @EnvironmentObject var model:PartyViewModel
+
     var party: PartyModel
     
     var start: CLLocationCoordinate2D{
         
         model.locationManager.location?.coordinate ?? CLLocationCoordinate2D()
-        
+
     }
     
     var end: CLLocationCoordinate2D{

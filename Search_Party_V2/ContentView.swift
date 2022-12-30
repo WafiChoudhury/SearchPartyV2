@@ -8,9 +8,10 @@
 import SwiftUI
 struct ContentView: View {
     var body: some View {
-       Tab()
         
-    }
+        NavigationView{
+            LaunchView()
+        }    }
 }
 
 struct ContentView_Previews: PreviewProvider {
