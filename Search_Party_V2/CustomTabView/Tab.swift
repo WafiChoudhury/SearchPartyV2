@@ -10,59 +10,44 @@ import FirebaseAuth
 
 struct Tab: View {
     
-    @State private var selection: String = "home"
     @State private var tabSelection: TabBarItem = .home
     @ObservedObject private var viewModel = PartyViewModel()
+    @State var selection = 2
     
     var body: some View {
         
-        TabView{
-            
-            SavedView()
-                .environmentObject(viewModel)
-                .tabItem {
-                    Label("Saved", systemImage: "star.fill")
-                }              .navigationBarBackButtonHidden(true)
-            
-            
-            MainView()
-                .environmentObject(viewModel)
-                .tabItem {
-                    Label("Main", systemImage: "house.fill")
-                }              .navigationBarBackButtonHidden(true)
-            
-            SettingsView()
-                .environmentObject(viewModel)
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }              .navigationBarBackButtonHidden(true)
-        }
-        
-    }
-    
-    
-    
-}
-extension Tab{
-    
-    private var defaultTabView : some View {
-        
         TabView(selection: $selection){
             
-            MainView()
-                .environmentObject(PartyViewModel())
+            SavedView()
                 .tabItem {
-                    Label("Home", systemImage: "house.fill").foregroundColor(.white)
+                    Label("Saved", systemImage: "star.fill")
                 }
+                .tag(1)
+                .navigationBarBackButtonHidden(true)
+                
+            
+            
             MainView()
-                .environmentObject(PartyViewModel())
                 .tabItem {
-                    Label("person", systemImage: "house.fill").foregroundColor(.white)
-                }
+                    Label("Main", systemImage: "house.fill")
+                }.tag(2)
+                .navigationBarBackButtonHidden(true)
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }      .navigationBarBackButtonHidden(true)
+                .tag(3)
             
             
             
         }
+       
+        
     }
     
+    
 }
+
+
+

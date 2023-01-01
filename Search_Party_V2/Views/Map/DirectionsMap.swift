@@ -11,7 +11,7 @@ import SwiftUI
 
 struct DirectionsMap: UIViewRepresentable{
     
-   @EnvironmentObject var model:PartyViewModel
+   @ObservedObject var model = PartyViewModel()
 
     var party: PartyModel
     

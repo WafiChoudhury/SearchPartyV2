@@ -69,6 +69,9 @@ struct LoginView: View {
             }
             
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+
         
     }
     func signIn(){
@@ -87,7 +90,7 @@ struct LoginView: View {
                     //issue with login
                     
                    let errorMessage = error?.localizedDescription
-                    print(errorMessage)
+                    print("BIG ERROR")
                     
                 }
             }

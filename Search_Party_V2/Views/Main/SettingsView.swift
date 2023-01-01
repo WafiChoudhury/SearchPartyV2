@@ -16,6 +16,8 @@ struct SettingsView: View {
     private var wd = 0.0
     var body: some View {
         
+        
+        
         List {
             // first section
             Section(header: Text("Change Password")) {
@@ -32,50 +34,20 @@ struct SettingsView: View {
                                    systemImageName:"cart")
                 })
                 
-              
+                
                 NavigationLink(destination: LaunchView().navigationBarBackButtonHidden(true), label: {
                     SettingRowView(title: "LogOut",
                                    systemImageName: "arrowshape.turn.up.forward")
                     
                 }).onAppear(){
                     logOut()
-
+                    
                 }
                 
             }
             // and more sections below ....
         }
         
-        
-        
-        
-        /*
-         
-         
-         VStack(){
-         
-         NavigationLink(destination: LaunchView(), isActive: $signedIn) { EmptyView() }
-         
-         Button {
-         logOut()
-         
-         } label: {
-         ZStack{
-         
-         RoundedRectangle(cornerRadius: 20)
-         .fill(Color(#colorLiteral(red: 0.13333334028720856, green: 0.13333334028720856, blue: 0.13333334028720856, alpha: 1)))
-         .frame(width:    UIScreen.main.bounds.width*0.8, height: 44).padding()
-         Text("Logout")
-         .foregroundColor(.white)
-         
-         }
-         
-         }
-         
-         
-         
-         }
-         */
     }
     func logOut(){
         

@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct SavedView: View {
-    
     @ObservedObject var viewModel = PartyViewModel()
-    @EnvironmentObject var model: PartyViewModel
     
-    
+
     var body: some View {
         
         ScrollView(showsIndicators:false){
             
             VStack(spacing: 25) {
                 
-                    
-                    ForEach((0...viewModel.saved.count-1), id: \.self) {
-                        PartyComponent(img: viewModel.saved[$0].image, title: viewModel.saved[$0].title, party: viewModel.saved[$0])
-                    
+                Text("Saved")
+                    .bold()
+                    .padding()
+                    .font(.largeTitle)
+                
+                ForEach((0...viewModel.saved.count-1), id: \.self) {
+                    PartyComponent(img: viewModel.saved[$0].image, title: viewModel.saved[$0].title, party: viewModel.saved[$0])
                 }
-                Spacer()
-            }
-            .onAppear(){
+            } .onAppear(){
                 
                 self.viewModel.fetchSaved()
             }
-            .padding()
         }
+        
         
         
         

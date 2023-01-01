@@ -10,7 +10,6 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject var viewModel = PartyViewModel()
-    @EnvironmentObject var model: PartyViewModel
 
     
     var body: some View {
@@ -18,6 +17,11 @@ struct MainView: View {
             ScrollView(showsIndicators:false){
                 
                 VStack(spacing: 25) {
+                    
+                    Text("Parties")
+                        .font(.largeTitle)
+                        .bold()
+                    
                     
                     ForEach((0...viewModel.parties.count-1), id: \.self) {
                         PartyComponent(img: viewModel.parties[$0].image, title: viewModel.parties[$0].title, party: viewModel.parties[$0])
@@ -28,10 +32,10 @@ struct MainView: View {
                 .onAppear(){
                     
                     self.viewModel.fetchParties()
-                    model.requestGeoLocationPermission()
+                    viewModel.requestGeoLocationPermission()
                     print(viewModel.parties.count)
                 }
-                .padding()
+                .padding(.bottom)
             }
             
         

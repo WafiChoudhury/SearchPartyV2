@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import Firebase
+import FirebaseAuth
 struct CreateAccount: View {
     
     
@@ -32,7 +33,7 @@ struct CreateAccount: View {
             
             SignUpInputForms(email: $email, password: $password, name: $name)
             
-            NavigationLink(destination: Tab(), isActive: $signedIn) { EmptyView() }
+            NavigationLink(destination: Tab().navigationBarBackButtonHidden(true), isActive: $signedIn) { EmptyView() }
             
             Button {
                 createAccount()
@@ -51,34 +52,47 @@ struct CreateAccount: View {
                 }
                 
             }
-         
+            
             
         }
         
     }
     func createAccount(){
-         
-         Auth.auth().createUser(withEmail: email, password: password){ result, error in
-             
-             let collection = Firestore.firestore().collection("users")
-             let new_user = User(
-                name: name, email: email, saved: [], purchased: [], id: id
-             )
-             collection.document(result?.user.uid ?? id).setData(new_user.dictionary)
+        
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
 
-             DispatchQueue.main.async {
-                 if(error == nil){
-                     signedIn = true
-                 }
-                 else{
-                     
-                     let errorMessage = error?.localizedDescription
-                     print(errorMessage)
-                 }
-             }
-         }
-         
-         
-     }
+        let db = Firestore.firestore()
+        let usersRef = db.collection("users")
+        
+        let newUser = User(name: name, email: email)
+        let data: [String: Any] = newUser.dictionary
+        var party = PartyModel(image: "Omega", price: 10, title: "Omegas Party", description: "party", latitude: 0.0, longitude: 0.0, address: "some house", id: "seshsh", capacity: 100, attendees: 10)
+        
+        let document = usersRef.addDocument(data: data)
+        document.collection("saved").addDocument(data: party.dictionary)
+        
+        let handle = Auth.auth().addStateDidChangeListener { auth, user in
+
+            
+            Auth.auth().createUser(withEmail: email, password: password){ result, error in
+                
+                print("success")
+
+                DispatchQueue.main.async {
+                    if(error == nil){
+                        signedIn = true
+                    }
+                    else{
+                        
+                        let errorMessage = error?.localizedDescription
+                        print(errorMessage ?? "error")
+                    }
+                }
+            }
+        }
+        
+    }
 }
 

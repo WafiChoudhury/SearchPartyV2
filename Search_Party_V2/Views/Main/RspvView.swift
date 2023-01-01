@@ -7,9 +7,11 @@
 
 import SwiftUI
 import Firebase
-
+import FirebaseAuth
 struct RsvpView: View {
     @State var imageName: String = "heart"
+    
+    @State private var showRSPV = false
     @ObservedObject var viewModel = PartyViewModel()
     var party: PartyModel
     var body: some View {
@@ -34,7 +36,7 @@ struct RsvpView: View {
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
-                    Text("Capacity: \(party.attendees) \\ \(party.capacity)")
+                    Text("People Going: \(party.attendees)")
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
@@ -63,7 +65,7 @@ struct RsvpView: View {
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
                             
-                           
+                            
                             
                             Image(systemName: imageName)
                                 .foregroundColor(.white)
@@ -73,7 +75,7 @@ struct RsvpView: View {
                     
                     
                     Button {
-                        
+                        showRSPV = true
                     } label: {
                         
                         ZStack{
@@ -83,13 +85,15 @@ struct RsvpView: View {
                                 .cornerRadius(10)
                             HStack(spacing:20){
                                 
-                                Text("RSVP")
+                                Text("Purchase")
                                 Image(systemName: "cart")
                             }.foregroundColor(.white)
                             
                             
                         }
-                    }
+                    }.sheet(isPresented: $showRSPV, content: {
+                        PurchasePartyView(showing:$showRSPV, party: party)
+                    })
                     
                     
                 }
@@ -107,12 +111,26 @@ struct RsvpView: View {
     func addCollection(){
         
         let db = Firestore.firestore()
-        let usersRef = db.collection("users")
-
-        if let currentUserID = Auth.auth().currentUser?.uid {
-            let currentUserRef = usersRef.document(currentUserID)
-            currentUserRef.updateData(["saved": FieldValue.arrayUnion([party.id])])
-        }
+        
+        //if let currentUserID = Auth.auth().currentUser?.uid {
+        let handle = Auth.auth().addStateDidChangeListener { auth, user in
             
+            if Auth.auth().currentUser != nil {
+                
+                print(party.title)
+                
+                let documentRef = db.collection("users").document(Auth.auth().currentUser?.uid ?? "")
+                let collectionRef = documentRef.collection("saved")
+                
+                let data: [String: Any] = party.dictionary
+                collectionRef.addDocument(data: data)
+            }
+            
+            else{
+                
+                print("hey")
+            }
+            
+        }
     }
 }

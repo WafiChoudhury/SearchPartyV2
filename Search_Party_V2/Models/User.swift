@@ -10,16 +10,11 @@ struct User{
     
     var name: String
     var email: String
-    var saved: [PartyModel]
-    var purchased: [String]
-    var id: String
     var dictionary: [String: Any] {
        return [
          "name": name,
          "email": email,
-         "saved": saved,
-         "purchased": purchased,
-         "id":id
+  
        ]
      }
     
