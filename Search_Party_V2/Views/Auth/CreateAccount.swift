@@ -73,26 +73,32 @@ struct CreateAccount: View {
         let document = usersRef.addDocument(data: data)
         document.collection("saved").addDocument(data: party.dictionary)
         
-        let handle = Auth.auth().addStateDidChangeListener { auth, user in
 
-            
-            Auth.auth().createUser(withEmail: email, password: password){ result, error in
+
+        if (email.hasSuffix(".edu")){
+           
+       
+        
+            let handle = Auth.auth().addStateDidChangeListener { auth, user in
+
                 
-                print("success")
+                Auth.auth().createUser(withEmail: email, password: password){ result, error in
+                    
+                    print("success")
 
-                DispatchQueue.main.async {
-                    if(error == nil){
-                        signedIn = true
-                    }
-                    else{
-                        
-                        let errorMessage = error?.localizedDescription
-                        print(errorMessage ?? "error")
+                    DispatchQueue.main.async {
+                        if(error == nil){
+                            signedIn = true
+                        }
+                        else{
+                            
+                            let errorMessage = error?.localizedDescription
+                            print(errorMessage ?? "error")
+                        }
                     }
                 }
             }
         }
-        
     }
 }
 

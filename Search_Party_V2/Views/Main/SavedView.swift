@@ -28,7 +28,7 @@ struct SavedView: View {
             } .onAppear(){
                 
                 self.viewModel.fetchSaved()
-            }
+            }.padding()
         }
         
         

@@ -35,7 +35,7 @@ struct MainView: View {
                     viewModel.requestGeoLocationPermission()
                     print(viewModel.parties.count)
                 }
-                .padding(.bottom)
+                .padding()
             }
             
         

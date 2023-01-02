@@ -29,6 +29,7 @@
 		B18EB22E294D63DD0073A853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18EB22D294D63DD0073A853 /* Assets.xcassets */; };
 		B18EB231294D63DD0073A853 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18EB230294D63DD0073A853 /* Preview Assets.xcassets */; };
 		B18EB23B294D67310073A853 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18EB23A294D67310073A853 /* LaunchView.swift */; };
+		B18FA77729625AD50073262D /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18FA77629625AD50073262D /* SFSafariViewWrapper.swift */; };
 		B1B6BE0C29512D6E003BB40E /* PartyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE0B29512D6E003BB40E /* PartyModel.swift */; };
 		B1B6BE0E29512F0E003BB40E /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE0D29512F0E003BB40E /* PartyViewModel.swift */; };
 		B1B6BE1129514346003BB40E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B6BE1029514346003BB40E /* Tab.swift */; };
@@ -67,6 +68,7 @@
 		B18EB22D294D63DD0073A853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B18EB230294D63DD0073A853 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B18EB23A294D67310073A853 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		B18FA77629625AD50073262D /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		B1B6BE0B29512D6E003BB40E /* PartyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyModel.swift; sourceTree = "<group>"; };
 		B1B6BE0D29512F0E003BB40E /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
 		B1B6BE1029514346003BB40E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B1448E33295BB1CD00BD6C13 /* SavedView.swift */,
 				B1D6FE07295D5394005C7016 /* SettingRowView.swift */,
 				B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */,
+				B18FA77629625AD50073262D /* SFSafariViewWrapper.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				B16F05FA29541CDF00B7D574 /* SignUpInputForms.swift in Sources */,
 				B1B6BE19295143D6003BB40E /* TabBarItemsKey.swift in Sources */,
 				B18EB23B294D67310073A853 /* LaunchView.swift in Sources */,
+				B18FA77729625AD50073262D /* SFSafariViewWrapper.swift in Sources */,
 				B120CBCD295F77AE0046C0E7 /* PurchasePartyView.swift in Sources */,
 				B14DC1AC294EBF8E00145D0E /* LoginView.swift in Sources */,
 				B1B6BE172951439B003BB40E /* CustomTabContainer.swift in Sources */,
@@ -499,7 +503,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -513,12 +517,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -535,7 +540,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -549,12 +554,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

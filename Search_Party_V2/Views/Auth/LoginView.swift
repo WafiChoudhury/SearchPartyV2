@@ -29,7 +29,9 @@ struct LoginView: View {
             
             LoginInputForms(email: $email, password: $password)
             
-            NavigationLink(destination: Tab(), isActive: $signedIn) { EmptyView() }
+            NavigationLink(destination: Tab()
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true), isActive: $signedIn) { EmptyView() }
             
             Button {
                 signIn()
