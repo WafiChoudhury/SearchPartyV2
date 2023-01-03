@@ -23,7 +23,9 @@ struct MainView: View {
                         .bold()
                     
                     
-                    ForEach((0...viewModel.parties.count-1), id: \.self) {
+                    ForEach((0..<viewModel.parties.count), id: \.self) {
+                        
+                        
                         PartyComponent(img: viewModel.parties[$0].image, title: viewModel.parties[$0].title, party: viewModel.parties[$0])
                        }
                     
@@ -33,7 +35,6 @@ struct MainView: View {
                     
                     self.viewModel.fetchParties()
                     viewModel.requestGeoLocationPermission()
-                    print(viewModel.parties.count)
                 }
                 .padding()
             }

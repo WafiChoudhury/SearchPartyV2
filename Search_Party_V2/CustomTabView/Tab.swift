@@ -20,7 +20,7 @@ struct Tab: View {
             
             SavedView()
                 .tabItem {
-                    Label("Saved", systemImage: "star.fill")
+                    Label("", systemImage: "bookmark.fill")
                 }
                 .tag(1)
                 .navigationBarBackButtonHidden(true)
@@ -29,13 +29,13 @@ struct Tab: View {
             
             MainView()
                 .tabItem {
-                    Label("Main", systemImage: "house.fill")
+                    Label("", systemImage: "house")
                 }.tag(2)
                 .navigationBarBackButtonHidden(true)
             
             SettingsView()
                 .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label("", systemImage: "person.fill")
                 }      .navigationBarBackButtonHidden(true)
                 .tag(3)
             

@@ -69,6 +69,8 @@
 		B18EB230294D63DD0073A853 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B18EB23A294D67310073A853 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		B18FA77629625AD50073262D /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		B18FA7792962B4F60073262D /* InstagramSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InstagramSans.ttf; sourceTree = "<group>"; };
+		B18FA77A2962B6300073262D /* Instagram Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Instagram Sans.ttf"; sourceTree = "<group>"; };
 		B1B6BE0B29512D6E003BB40E /* PartyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyModel.swift; sourceTree = "<group>"; };
 		B1B6BE0D29512F0E003BB40E /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
 		B1B6BE1029514346003BB40E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				B16F05FB295420A900B7D574 /* golden.jpeg */,
 				B1B6BE0D29512F0E003BB40E /* PartyViewModel.swift */,
+				B18FA7792962B4F60073262D /* InstagramSans.ttf */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 		B18EB239294D66FD0073A853 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B18FA77A2962B6300073262D /* Instagram Sans.ttf */,
 				B1B6BE0B29512D6E003BB40E /* PartyModel.swift */,
 				B16F05FF2955818C00B7D574 /* User.swift */,
 			);
@@ -503,7 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -523,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -540,7 +544,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -560,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

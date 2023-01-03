@@ -117,18 +117,19 @@ struct RsvpView: View {
             
             if Auth.auth().currentUser != nil {
                 
-                print(party.title)
                 
                 let documentRef = db.collection("users").document(Auth.auth().currentUser?.uid ?? "")
                 let collectionRef = documentRef.collection("saved")
-                
+                let document = collectionRef.document(party.id ?? "id")
                 let data: [String: Any] = party.dictionary
-                collectionRef.addDocument(data: data)
+                document.setData(data)
+                
+                
             }
             
             else{
                 
-                print("hey")
+                print("man")
             }
             
         }

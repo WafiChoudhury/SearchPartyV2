@@ -16,7 +16,7 @@ struct PartyModel: Identifiable{
     var latitude: Double?
     var longitude: Double?
     var address: String?
-    var id: String
+    var id: String?
     var capacity: Int
     var attendees:Int
     
@@ -38,12 +38,12 @@ struct PartyModel: Identifiable{
     var dictionary: [String: Any] {
        return [
          "image": image,
-         "price": price,
+         "price": price ?? 0.0,
          "title": title,
-         "description": description,
-         "latitude":latitude,
-         "longitude": longitude,
-         "address": address,
+         "description": description ?? "A really cool party",
+         "latitude":latitude ?? 30.28423,
+         "longitude": longitude ?? -97.74471,
+         "address": address ?? "2101 Rio Grande St",
          "id": id,
          "capacity":capacity,
          "attendees" : attendees

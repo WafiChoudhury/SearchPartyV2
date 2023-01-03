@@ -64,16 +64,6 @@ struct CreateAccount: View {
         }
 
         let db = Firestore.firestore()
-        let usersRef = db.collection("users")
-        
-        let newUser = User(name: name, email: email)
-        let data: [String: Any] = newUser.dictionary
-        var party = PartyModel(image: "Omega", price: 10, title: "Omegas Party", description: "party", latitude: 0.0, longitude: 0.0, address: "some house", id: "seshsh", capacity: 100, attendees: 10)
-        
-        let document = usersRef.addDocument(data: data)
-        document.collection("saved").addDocument(data: party.dictionary)
-        
-
 
         if (email.hasSuffix(".edu")){
            
@@ -85,7 +75,14 @@ struct CreateAccount: View {
                 Auth.auth().createUser(withEmail: email, password: password){ result, error in
                     
                     print("success")
-
+                    
+                    
+                    let newUser = User(name: name, email: email)
+                    let data: [String: Any] = newUser.dictionary
+                    let usersRef = db.collection("users")
+                    let document = usersRef.document(Auth.auth().currentUser?.uid ?? "id")
+                    document.setData(data)
+                    
                     DispatchQueue.main.async {
                         if(error == nil){
                             signedIn = true

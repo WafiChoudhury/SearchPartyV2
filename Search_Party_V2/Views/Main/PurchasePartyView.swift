@@ -62,7 +62,7 @@ struct PurchasePartyView: View {
         let db = Firestore.firestore()
         let partiesRef = db.collection("Parties")
         
-        let currentUserRef = partiesRef.document(party.id)
+        let currentUserRef = partiesRef.document(party.id ?? "id")
 
         currentUserRef.getDocument { (document, error) in
             if let document = document, document.exists {

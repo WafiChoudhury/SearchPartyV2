@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedView: View {
     @ObservedObject var viewModel = PartyViewModel()
     
-
+    
     var body: some View {
         
         ScrollView(showsIndicators:false){
@@ -22,13 +22,28 @@ struct SavedView: View {
                     .padding()
                     .font(.largeTitle)
                 
-                ForEach((0...viewModel.saved.count-1), id: \.self) {
-                    PartyComponent(img: viewModel.saved[$0].image, title: viewModel.saved[$0].title, party: viewModel.saved[$0])
-                }
-            } .onAppear(){
                 
-                self.viewModel.fetchSaved()
-            }.padding()
+                
+                
+                if (viewModel.saved.count != 0) {
+                  
+                
+                    ForEach((0..<viewModel.saved.count), id: \.self) {
+                        PartyComponent(img: viewModel.saved[$0].image, title: viewModel.saved[$0].title, party: viewModel.saved[$0])
+                    }
+                    
+                }
+                else{
+                    
+                    Text("Save some parties!")
+                }
+                
+                
+            }
+            .onAppear(){
+            self.viewModel.fetchSaved()
+            }
+            .padding()
         }
         
         

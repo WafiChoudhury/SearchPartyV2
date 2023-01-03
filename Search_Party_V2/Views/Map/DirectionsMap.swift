@@ -67,7 +67,7 @@ struct DirectionsMap: UIViewRepresentable{
         
         let endAnnotation = MKPointAnnotation()
         endAnnotation.coordinate = end
-        endAnnotation.title = party.title ?? ""
+        endAnnotation.title = party.title ?? "A Cool Party"
         
         map.addAnnotation(endAnnotation)
         return map
