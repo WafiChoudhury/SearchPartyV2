@@ -12,6 +12,7 @@
 		B11559E62953CFE9000A7C44 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E52953CFE9000A7C44 /* CreateAccount.swift */; };
 		B120CBCD295F77AE0046C0E7 /* PurchasePartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */; };
 		B13DB7D7295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png in Resources */ = {isa = PBXBuildFile; fileRef = B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */; };
+		B13E1BB22964D1D50010889D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E1BB12964D1D50010889D /* AccountView.swift */; };
 		B140F889294FFE89008019FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B140F888294FFE89008019FC /* GoogleService-Info.plist */; };
 		B1448E32295BAB2300BD6C13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1448E31295BAB2300BD6C13 /* SettingsView.swift */; };
 		B1448E34295BB1CE00BD6C13 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1448E33295BB1CD00BD6C13 /* SavedView.swift */; };
@@ -50,6 +51,7 @@
 		B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePartyView.swift; sourceTree = "<group>"; };
 		B13DB7D52958168B0088068B /* Search-Party-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Search-Party-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png"; sourceTree = "<group>"; };
+		B13E1BB12964D1D50010889D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		B140F888294FFE89008019FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1448E31295BAB2300BD6C13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B1448E33295BB1CD00BD6C13 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B14DC1AD294EC3C300145D0E /* LoginInputForms.swift */,
 				B11559E52953CFE9000A7C44 /* CreateAccount.swift */,
 				B16F05F929541CDF00B7D574 /* SignUpInputForms.swift */,
+				B13E1BB12964D1D50010889D /* AccountView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				B1B6BE0C29512D6E003BB40E /* PartyModel.swift in Sources */,
 				B15495E6294FCEFE00BEA072 /* PartyComponent.swift in Sources */,
 				B1B6BE1129514346003BB40E /* Tab.swift in Sources */,
+				B13E1BB22964D1D50010889D /* AccountView.swift in Sources */,
 				B1448E34295BB1CE00BD6C13 /* SavedView.swift in Sources */,
 				B1B6BE1329514369003BB40E /* TabBarItem.swift in Sources */,
 				B11559E62953CFE9000A7C44 /* CreateAccount.swift in Sources */,
@@ -507,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -527,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -544,7 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -564,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -21,7 +21,7 @@ struct SettingsView: View {
         List {
             // first section
             Section(header: Text("Change Password")) {
-                NavigationLink(destination: EmptyView(), label: {
+                NavigationLink(destination: AccountView(), label: {
                     SettingRowView(title: "My Account",
                                    systemImageName: "person")
                 })
