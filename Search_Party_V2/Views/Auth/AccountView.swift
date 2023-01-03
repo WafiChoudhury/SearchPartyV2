@@ -69,5 +69,16 @@ struct AccountView: View {
                 print("User successfully deleted!")
             }
         }
+        
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+              print("deletion error")
+          } else {
+            // Account deleted.
+          }
+        }
     }
 }
