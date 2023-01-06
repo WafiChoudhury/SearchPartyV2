@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 struct AccountView: View {
   
@@ -69,16 +70,10 @@ struct AccountView: View {
                 print("User successfully deleted!")
             }
         }
-        
-        let user = Auth.auth().currentUser
+        let handle = Auth.auth().addStateDidChangeListener { auth, user in
 
-        user?.delete { error in
-          if let error = error {
-            // An error happened.
-              print("deletion error")
-          } else {
-            // Account deleted.
-          }
+            Auth.auth().currentUser?.delete()
+            print(user?.email)
         }
     }
 }

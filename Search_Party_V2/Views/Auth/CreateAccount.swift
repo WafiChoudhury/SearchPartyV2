@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 struct CreateAccount: View {
     
-    
+    @State private var errorMessage: String?
     @State var email = ""
     @State var password = ""
     @State var name = ""
@@ -32,7 +32,11 @@ struct CreateAccount: View {
                 .foregroundColor(Color(#colorLiteral(red: 0.66, green: 0.65, blue: 0.65, alpha: 1))).multilineTextAlignment(.center)
             
             SignUpInputForms(email: $email, password: $password, name: $name)
-            
+            if(errorMessage != nil){
+                Section{
+                    Text(errorMessage!).frame(width:300, height:50)
+                }
+            }
             NavigationLink(destination: Tab().navigationBarBackButtonHidden(true), isActive: $signedIn) { EmptyView() }
             
             Button {
@@ -62,17 +66,24 @@ struct CreateAccount: View {
         if FirebaseApp.app() == nil {
             FirebaseApp.configure()
         }
-
-        let db = Firestore.firestore()
-
-        if (email.hasSuffix(".edu")){
-           
-       
         
+        let db = Firestore.firestore()
+        
+        if (email.hasSuffix(".edu")){
+            
+            
+            
             let handle = Auth.auth().addStateDidChangeListener { auth, user in
-
                 
-                Auth.auth().createUser(withEmail: email, password: password){ result, error in
+                
+                Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+                    guard let user = authResult?.user else {
+                        return
+                        
+                        
+                    }
+                    let uid = user.uid
+                    // You can now use the `uid` to create a new document in Firestore
                     
                     print("success")
                     
@@ -80,7 +91,7 @@ struct CreateAccount: View {
                     let newUser = User(name: name, email: email)
                     let data: [String: Any] = newUser.dictionary
                     let usersRef = db.collection("users")
-                    let document = usersRef.document(Auth.auth().currentUser?.uid ?? "id")
+                    let document = usersRef.document(uid)
                     document.setData(data)
                     
                     DispatchQueue.main.async {
@@ -89,8 +100,8 @@ struct CreateAccount: View {
                         }
                         else{
                             
-                            let errorMessage = error?.localizedDescription
-                            print(errorMessage ?? "error")
+                            errorMessage = error?.localizedDescription
+                            
                         }
                     }
                 }
@@ -98,4 +109,5 @@ struct CreateAccount: View {
         }
     }
 }
+
 

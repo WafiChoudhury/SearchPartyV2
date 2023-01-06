@@ -13,6 +13,7 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State private var signedIn: Bool = false
+    @State private var errorMessage: String?
     private var wd = 0.0
     var body: some View {
         
@@ -28,6 +29,14 @@ struct LoginView: View {
                 .foregroundColor(Color(#colorLiteral(red: 0.66, green: 0.65, blue: 0.65, alpha: 1))).multilineTextAlignment(.center)
             
             LoginInputForms(email: $email, password: $password)
+            
+            
+            if(errorMessage != nil){
+                Section{
+                    
+                    Text(errorMessage!).frame(width:300, height:50)
+                }
+            }
             
             NavigationLink(destination: Tab()
                 .navigationBarBackButtonHidden(true)
@@ -73,7 +82,7 @@ struct LoginView: View {
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-
+        
         
     }
     func signIn(){
@@ -82,18 +91,21 @@ struct LoginView: View {
             
             DispatchQueue.main.async {
                 
-               
+                
                 if( error == nil){
                     
                     signedIn = true
+                    let user = Auth.auth().currentUser
+                    if let user = user {
+                        // User is logged in
+                    }
                     
                 }
                 else{
                     //issue with login
                     
-                   let errorMessage = error?.localizedDescription
-                    print("BIG ERROR")
-                    
+                    errorMessage = error?.localizedDescription
+
                 }
             }
         }

@@ -30,6 +30,7 @@ struct SavedView: View {
                 
                     ForEach((0..<viewModel.saved.count), id: \.self) {
                         PartyComponent(img: viewModel.saved[$0].image, title: viewModel.saved[$0].title, party: viewModel.saved[$0])
+                        
                     }
                     
                 }

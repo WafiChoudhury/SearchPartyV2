@@ -20,7 +20,7 @@ struct SettingsView: View {
         
         List {
             // first section
-            Section(header: Text("Change Password")) {
+            Section(header: Text("Account Prefrences")) {
                 NavigationLink(destination: AccountView(), label: {
                     SettingRowView(title: "My Account",
                                    systemImageName: "person")
@@ -29,7 +29,7 @@ struct SettingsView: View {
             
             // second section
             Section(header: Text("More Features")) {
-                NavigationLink(destination: EmptyView(), label: {
+                NavigationLink(destination: PurchasedPartiesView(), label: {
                     SettingRowView(title: "View Purchased Parties",
                                    systemImageName:"cart")
                 })

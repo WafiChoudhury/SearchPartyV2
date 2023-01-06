@@ -14,18 +14,18 @@ struct PurchasePartyView: View {
     @State var party: PartyModel
     var body: some View {
         
-        VStack{
+        VStack(spacing:40){
             Spacer()
             VStack(spacing:50){
                 
-                Text("This Party is Free!")
-                    .font(.title)
+                Text("Purchasing parties coming soon!")
+                    .font(.title2)
                     .bold()
-                Text("RSVP the party to indicate you are coming")
+     
+                
+                Text("Click the RSVP button to indicate you're coming")
                     .font(.subheadline)
                 
-                Text("You can un-RSVP at any time")
-                    .font(.subheadline)
             }
             Spacer()
             Button {
@@ -41,7 +41,7 @@ struct PurchasePartyView: View {
                     HStack(spacing:20){
                         
                         Text("RSVP")
-                        Image(systemName: "cart")
+                        Image(systemName: "square.and.arrow.down")
                     }.foregroundColor(.white)
                     
                     
@@ -69,8 +69,7 @@ struct PurchasePartyView: View {
                 let property = document.get("attendees")
                 currentUserRef.updateData(["attendees": (property as! Int+1)])
                 
-                print(property)
-                
+
             } else {
                 print("error")
             }

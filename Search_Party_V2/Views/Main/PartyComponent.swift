@@ -23,7 +23,7 @@ struct PartyComponent: View {
                 
                 
                 Rectangle()
-                    .frame(width: UIScreen.main.bounds.width*0.80, height: UIScreen.main.bounds.width*0.45)
+                    .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.width*0.50)
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -40,13 +40,13 @@ struct PartyComponent: View {
                         .background(Color.primary) // Color of the border
                         .cornerRadius(10) // Outer corner radius
                     
-                    VStack(alignment:.leading, spacing:15){
+                    VStack(alignment:.leading, spacing:20){
                         
                         Text(title)
                             .foregroundColor(.black)
                             .bold()
                         
-                       Text("9:00 PM")
+                        Text(party.fullDateString)
                             .bold()
                             .foregroundColor(.black)
                         

@@ -11,6 +11,7 @@
 		B11559E32953CB52000A7C44 /* DirectionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E22953CB52000A7C44 /* DirectionsMap.swift */; };
 		B11559E62953CFE9000A7C44 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11559E52953CFE9000A7C44 /* CreateAccount.swift */; };
 		B120CBCD295F77AE0046C0E7 /* PurchasePartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */; };
+		B1393052296795F3007D5112 /* PurchasedPartiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1393051296795F3007D5112 /* PurchasedPartiesView.swift */; };
 		B13DB7D7295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png in Resources */ = {isa = PBXBuildFile; fileRef = B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */; };
 		B13E1BB22964D1D50010889D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13E1BB12964D1D50010889D /* AccountView.swift */; };
 		B140F889294FFE89008019FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B140F888294FFE89008019FC /* GoogleService-Info.plist */; };
@@ -49,6 +50,7 @@
 		B11559E52953CFE9000A7C44 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		B11559E72953D2EB000A7C44 /* Search_Party_V2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Search_Party_V2.entitlements; sourceTree = "<group>"; };
 		B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePartyView.swift; sourceTree = "<group>"; };
+		B1393051296795F3007D5112 /* PurchasedPartiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedPartiesView.swift; sourceTree = "<group>"; };
 		B13DB7D52958168B0088068B /* Search-Party-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Search-Party-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B13DB7D6295816A50088068B /* DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DALL·E 2022-12-24 23.24.47 - an oil painting of a red and white lighthouse.png"; sourceTree = "<group>"; };
 		B13E1BB12964D1D50010889D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				B1D6FE07295D5394005C7016 /* SettingRowView.swift */,
 				B120CBCC295F77AE0046C0E7 /* PurchasePartyView.swift */,
 				B18FA77629625AD50073262D /* SFSafariViewWrapper.swift */,
+				B1393051296795F3007D5112 /* PurchasedPartiesView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				B16F05FE29550A0100B7D574 /* RspvView.swift in Sources */,
 				B16F06002955818D00B7D574 /* User.swift in Sources */,
 				B1448E32295BAB2300BD6C13 /* SettingsView.swift in Sources */,
+				B1393052296795F3007D5112 /* PurchasedPartiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -519,7 +523,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Search-Party-V2-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SearchParty;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = information;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We only use your location for directions to local parties, we don't save or sell your location data!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -531,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -548,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Search_Party_V2/Search_Party_V2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Search_Party_V2/Preview Content\"";
 				DEVELOPMENT_TEAM = ACRAVGQSGU;
 				ENABLE_BITCODE = NO;
@@ -556,7 +560,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Search-Party-V2-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = SearchParty;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = information;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We only use your location for directions to local parties, we don't save or sell your location data!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -568,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 8.0;
+				MARKETING_VERSION = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "BAAG.Search-Party-V2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

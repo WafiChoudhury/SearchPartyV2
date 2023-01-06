@@ -16,7 +16,7 @@ struct LoginInputForms: View {
         
         VStack {
             
-            TextField("Username", text: $email)
+            TextField("Email", text: $email)
                 .frame(width:UIScreen.main.bounds.width*0.75)
                 .padding()
                 .background(lightGreyColor)

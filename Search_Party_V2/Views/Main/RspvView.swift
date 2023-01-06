@@ -32,20 +32,31 @@ struct RsvpView: View {
                 
                 VStack(alignment:.leading, spacing:20){
                     
-                    Text(party.title)
-                        .font(.title)
-                        .foregroundColor(.black)
-                        .bold()
-                    Text("People Going: \(party.attendees)")
-                        .font(.title)
-                        .foregroundColor(.black)
-                        .bold()
-                    let price = party.price ?? 0.0
+                    HStack(spacing:80){
+                        
+                        Text(party.title)
+                            .font(.title)
+                            .foregroundColor(.black)
+                            .bold()
+                        let price = party.price ?? 0.0
+                        
+                        let txt = "$" + String(price)
+                        Text(txt)
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.black)
+                        
+                    }
                     
-                    let txt = "$" + String(price)
-                    Text(txt)
-                        .bold()
+                    
+                    Text("People Going: \(party.attendees)")
+                        .font(.title2)
                         .foregroundColor(.black)
+                    
+                    Text((party.dateString))
+                        .font(.title2)
+                        .foregroundColor(.black)
+                        .bold()
                     
                     
                     
@@ -123,8 +134,7 @@ struct RsvpView: View {
                 let document = collectionRef.document(party.id ?? "id")
                 let data: [String: Any] = party.dictionary
                 document.setData(data)
-                
-                
+            
             }
             
             else{

@@ -84,9 +84,10 @@ class PartyViewModel: NSObject, CLLocationManagerDelegate, ObservableObject  {
                 let adress = data["adress"] as? String ?? "fun party"
                 let cap = data["capacity"] as? Int ?? 0
                 let atend = data["attendees"] as? Int ?? 0
-                
                 let id = data["id"] as? String ?? ""
-                return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend)
+                let dateEvent = (data["time"] as? Timestamp)?.dateValue() ?? Date()
+                
+                return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend,dateEvent: dateEvent)
                 
             }
             
@@ -134,8 +135,10 @@ class PartyViewModel: NSObject, CLLocationManagerDelegate, ObservableObject  {
                         let adress = data["adress"] as? String ?? "fun party"
                         let cap = data["capacity"] as? Int ?? 0
                         let atend = data["attendees"] as? Int ?? 0
-                        let id  = data["id"] as? String ?? "" 
-                        return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend)
+                        let id  = data["id"] as? String ?? ""
+                        let dateEvent = (data["time"] as? Timestamp)?.dateValue() ?? Date()
+
+                        return PartyModel(image: img, price: price, title: title, description: description, latitude: lat, longitude: lon, address: adress, id: id, capacity: cap, attendees: atend, dateEvent: dateEvent)
                         
                     }
                 }
