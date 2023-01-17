@@ -32,8 +32,7 @@ struct PartyComponent: View {
                 
                 HStack(spacing:40){
                     
-                    Image(img)
-                        .resizable()
+                    AsyncImage(url: URL(string: img))
                         .cornerRadius(10)
                         .frame(width: UIScreen.main.bounds.width*0.35, height: UIScreen.main.bounds.width*0.35)
                         .padding(3) // Width of the border

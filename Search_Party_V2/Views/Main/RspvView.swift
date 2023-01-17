@@ -22,8 +22,7 @@ struct RsvpView: View {
                 
                 
                 
-                Image(party.image)
-                    .resizable()
+                AsyncImage(url: URL(string: party.image))
                     .frame(width:UIScreen.main.bounds.width*0.8,height:UIScreen.main.bounds.height*0.4)
                     .ignoresSafeArea()
                 
